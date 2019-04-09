@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Document</title>
+  <style>
+  .header{
+    color:red;
+  }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+function Title(props) {
+  // return React.createElement(
+  //     'div',
+  //     null,
+  //     props.greeting + ', this is a div!',
+  //     props.children
+  //   )
+
+  return <div>
+    {
+      props.greeting + ', this is a div!'
+    }
+    {
+      props.children
+    }
+    </div>
+}
+
+
+// var hello = React.createElement(
+//   'h1',
+//   {className:'header'},
+//   [
+//     '<h2>Hello world!</h2>',
+//     React.createElement(Title,{greeting:"Hello" }, "Yes!!!")
+//   ]);
+
+  var hello = <h1 className="header">
+      { '<h2>Hello world!</h2>' }
+      <Title greeting="hello">
+        Yes!!
+        
+      </Title>
+    </h1>
+ReactDOM.render(hello, document.querySelector('#root'));
+  </script>
+</body>
+</html>

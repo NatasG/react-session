@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Js DOM functions</title>
+  <style>
+    .cn{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/javascript">
+    var root = document.createElement('div');
+    root.classList.add('cn');
+    var subElement = document.createElement('div');
+    subElement.appendChild(document.createTextNode('Hello world!'));
+
+    root.appendChild(document.createTextNode('This is Root!'))
+    root.appendChild(subElement)
+    document.querySelector('#root').appendChild(root);
+
+</script>
+</body>
+</html>

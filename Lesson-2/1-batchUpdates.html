@@ -28,13 +28,18 @@ class Title extends React.Component{
       count: this.state.count + 1,
     });
 
-    this.setState({
-      count: this.state.count + 1,
-    });
+    setTimeout(() => {
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }, 1000);
+    
 
-    this.setState({
-      count: this.state.count + 1,
-    });
+    setTimeout(() => {
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }, 2000);
   }
 
   render(){

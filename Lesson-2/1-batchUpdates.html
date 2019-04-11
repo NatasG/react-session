@@ -23,6 +23,12 @@ class Title extends React.Component{
     }
   }
 
+  componentDidMount(){
+    this.setState({
+      count: this.state.count + 1,
+    });
+  }
+
   render(){
     console.log('rendering!');
 

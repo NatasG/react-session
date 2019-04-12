@@ -26,10 +26,23 @@ class NumberSize extends React.Component {
   }
 }
 
+class Box extends React.Component {
+  
+  componentDidMount(){
+    console.log('Box mounted')
+  }
+
+  render(){
+    console.log('Box rendering')
+    return  <h1>{this.props.children}</h1>
+  }
+}
+
+
 class Title extends React.Component {
   render(){
     console.log('Title rendering')
-    return <h1>Title here! <NumberSize number={this.props.number} /></h1>
+    return <Box>Title here! <NumberSize number={this.props.number} /></Box>
   }
 }
 

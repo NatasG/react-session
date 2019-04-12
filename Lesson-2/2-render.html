@@ -13,9 +13,12 @@
   <div id="root"></div>
 
   <script type="text/babel">
-function Title() {
-  console.log('Title rendering')
-  return <h1>Title here!</h1>
+
+class Title extends React.PureComponent {
+  render(){
+    console.log('Title rendering')
+    return <h1>Title here!</h1>
+  }
 }
 
 class Main extends React.Component{

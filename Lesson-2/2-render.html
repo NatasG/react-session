@@ -14,15 +14,22 @@
 
   <script type="text/babel">
 
-class Title extends React.Component {
+class NumberSize extends React.Component {
 
   shouldComponentUpdate(){
     return this.props.number > 5;
   }
 
   render(){
+    console.log('NumberSize rendering')
+    return this.props.number > 5 ? 'Big Number!' : 'Small Number'
+  }
+}
+
+class Title extends React.Component {
+  render(){
     console.log('Title rendering')
-    return <h1>Title here! {this.props.number > 5 ? 'Big Number!' : 'Small Number' }</h1>
+    return <h1>Title here! <NumberSize number={this.props.number} /></h1>
   }
 }
 

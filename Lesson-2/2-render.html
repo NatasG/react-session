@@ -17,7 +17,7 @@
 class Title extends React.Component {
 
   shouldComponentUpdate(){
-    return true;
+    return this.props.number > 5;
   }
 
   render(){

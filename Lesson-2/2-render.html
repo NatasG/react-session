@@ -22,7 +22,7 @@ class Title extends React.Component {
 
   render(){
     console.log('Title rendering')
-    return <h1>Title here!</h1>
+    return <h1>Title here! {this.props.number > 5 ? 'Big Number!' : 'Small Number' }</h1>
   }
 }
 
@@ -43,8 +43,13 @@ class Main extends React.Component{
   render(){
     console.log('Main rendering!');
     return <div>
-        <Title />
+        <Title number={this.state.count} />
         count: {this.state.count}
+        <button onClick={() => {
+          this.setState({
+            count: this.state.count + 1,
+          });
+        }}>Add</button>
       </div>
   }
 }

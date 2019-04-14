@@ -36,10 +36,10 @@ class Main extends React.Component{
   }
   
   componentDidMount(){
+    const { title } = this.state;
+    title.greeting = "Hello There!";
     this.setState({
-      title:{
-        greeting:"Hello There!",
-      }
+      title
     });
   }
 
